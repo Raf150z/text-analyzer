@@ -28,3 +28,37 @@ Text Analyzer is a professional Python library for comprehensive text analysis. 
 git clone https://github.com/Raf150z/text-analyzer.git
 cd text-analyzer
 pip install -r requirements.txt
+```
+
+### Basic Usage
+'''
+from src.text_analyzer import TextAnalyzer
+
+# Analyze text
+text = "Your text to analyze goes here."
+analyzer = TextAnalyzer(text=text)
+
+# Get statistics
+print(f"Total words: {analyzer.total_words}")
+print(f"Unique words: {len(analyzer.unique_words)}")
+
+# Get most common words
+top_words = analyzer.get_most_common(10)
+for word, count in top_words:
+    print(f"{word}: {count}")
+'''
+
+### Advanced Usage
+'''
+from src.text_analyzer import AdvancedTextAnalyzer
+from src.file_handler import FileHandler
+
+# Analyze file
+analyzer = AdvancedTextAnalyzer(file_path="document.txt")
+
+# Generate and save report
+report = analyzer.generate_report()
+handler = FileHandler("output")
+handler.save_report(report, "analysis_report", "txt")
+'''
+

@@ -35,15 +35,12 @@ pip install -r requirements.txt
 '''bash
 from src.text_analyzer import TextAnalyzer
 
-# Analyze text
 text = "Your text to analyze goes here."
 analyzer = TextAnalyzer(text=text)
 
-# Get statistics
 print(f"Total words: {analyzer.total_words}")
 print(f"Unique words: {len(analyzer.unique_words)}")
 
-# Get most common words
 top_words = analyzer.get_most_common(10)
 for word, count in top_words:
     print(f"{word}: {count}")
@@ -55,10 +52,8 @@ for word, count in top_words:
 from src.text_analyzer import AdvancedTextAnalyzer
 from src.file_handler import FileHandler
 
-# Analyze file
 analyzer = AdvancedTextAnalyzer(file_path="document.txt")
 
-# Generate and save report
 report = analyzer.generate_report()
 handler = FileHandler("output")
 handler.save_report(report, "analysis_report", "txt")

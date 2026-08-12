@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 ### Basic Usage
 
-'''bash
+```bash
 from src.text_analyzer import TextAnalyzer
 
 text = "Your text to analyze goes here."
@@ -44,11 +44,11 @@ print(f"Unique words: {len(analyzer.unique_words)}")
 top_words = analyzer.get_most_common(10)
 for word, count in top_words:
     print(f"{word}: {count}")
-'''
+```
 
 ### Advanced Usage
 
-'''bash
+```bash
 from src.text_analyzer import AdvancedTextAnalyzer
 from src.file_handler import FileHandler
 
@@ -57,5 +57,5 @@ analyzer = AdvancedTextAnalyzer(file_path="document.txt")
 report = analyzer.generate_report()
 handler = FileHandler("output")
 handler.save_report(report, "analysis_report", "txt")
-'''
+```
 

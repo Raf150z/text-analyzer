@@ -31,6 +31,7 @@ pip install -r requirements.txt
 ```
 
 ### Basic Usage
+
 '''bash
 from src.text_analyzer import TextAnalyzer
 
@@ -49,6 +50,7 @@ for word, count in top_words:
 '''
 
 ### Advanced Usage
+
 '''bash
 from src.text_analyzer import AdvancedTextAnalyzer
 from src.file_handler import FileHandler

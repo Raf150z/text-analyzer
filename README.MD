@@ -28,6 +28,7 @@ Text Analyzer is a professional Python library for comprehensive text analysis. 
 git clone https://github.com/Raf150z/text-analyzer.git
 cd text-analyzer
 pip install -r requirements.txt
+python examples/example_usage.py
 ```
 
 ### Basic Usage
